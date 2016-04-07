@@ -11,12 +11,12 @@ p unencrypted_message
 file_to_write = ARGV[1]
 p file_to_write
 
-key = ARGV[2]
+key = ARGV[2].split('')
 p key
 
 date = ARGV[3]
 p date
 
-message = e.decrypt(unencrypted_message,key,date)
-p message
-File.write(file_to_write, message)
+encrypted_message = e.encrypt(unencrypted_message,key,date)
+p encrypted_message
+File.write(file_to_write, encrypted_message)

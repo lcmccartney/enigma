@@ -1,11 +1,7 @@
-class Encrypt
+class Crack
 
-  def initialize
-    @random_five
+  def initialize(message)
+    @message = message
   end
-
-  def random
-    @random_five = rand(00000..99999)
-  end
-
+  
 end
