@@ -6,15 +6,20 @@ end
 
 class OffsetCalculator
   def initialize(key=nil,date=nil)
-    @key = key.split('')
-    @date = date
-
-    if @key.nil?
+    if key.nil?
       key_generator = KeyGenerator.new
       @key = key_generator.get_key
+    else
+      @key = key.split('')
     end
-    if @date.nil?
+    if date.nil?
       @date = Time.new.strftime("%d%m%y").to_s
+    else
+      if @date.is_a? String
+        @date = date
+      else
+        @date = date.strftime("%d%m%y").to_s
+      end
     end
     p "key is #{@key.join('')}, date is #{@date}"
   end

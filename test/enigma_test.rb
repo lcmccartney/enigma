@@ -65,52 +65,10 @@ class EnigmaTest < Minitest::Test
     assert_equal 38, @char_index[","]
   end
 
-  def test_testing
-    e = Enigma.new
-    e.encrypt
-    assert_equal "im tired", e.encrypt
-  end
 
-
-
-
+#********************TESTED*****************************
 #ruby encrypt.rb encrypted.txt decrypted.txt 4706351 060416
 #ruby decrypt.rb message_to_encrypt.txt encrypted.txt
 
 
-
-
-
-
-  # def test_the_character_map_is_an_array
-  #   e = Enigma.new
-  #   assert_equal
-  # end
-
-
-  # def test_the_character_map_is_an_array
-  #   e = Enigma.new
-  #   assert
-  #
-  #
-  # end
-
-
-
-
-
-
-  # def test_random_5_goes_abcd
-  #
-  #   e = Enigma.new
-  #   e.random
-  #   assert_equal 4, e.abcd_randfive.length
-  # end
-  #
-  # def test_date_is_4_digits
-  #
-  #   e = Enigma.new
-  #   # encrypt.get_date
-  #   assert_equal 4, e.get_date.length
-  # end
 end

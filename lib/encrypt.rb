@@ -1,6 +1,6 @@
 require './enigma.rb'
 
-enigma = Enigma.new
+e = Enigma.new
 
 file_to_read = ARGV[0]
 p file_to_read
@@ -11,7 +11,7 @@ p unencrypted_message
 file_to_write = ARGV[1]
 p file_to_write
 
-key = ARGV[2].split('')
+key = ARGV[2]
 p key
 
 date = ARGV[3]

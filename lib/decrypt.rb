@@ -1,6 +1,6 @@
 require './enigma.rb'
 
-enigma = Enigma.new
+e = Enigma.new
 
 file_to_read = ARGV[0]
 p file_to_read
