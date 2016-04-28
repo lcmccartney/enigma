@@ -12,22 +12,6 @@ class EnigmaTest < Minitest::Test
     @encrypted_message = "hello"
   end
 
-  def test_key_has_7_elements
-    key_generator = KeyGenerator.new
-    assert_equal 7, key_generator.get_key.length
-  end
-
-  def test_key_composed_of_integers
-    key_generator = KeyGenerator.new
-    assert key_generator.get_key.all? {|i|
-                        i.is_a?(Integer) }
-  end
-
-  def test_keygen_is_an_array
-    key_generator = KeyGenerator.new
-    assert_equal Array, key_generator.get_key.class
-  end
-
   def test_init_date_is_generated_if_nil
     offset_calculator = OffsetCalculator.new(key="7654532")
     refute nil, offset_calculator.get_offset
@@ -41,7 +25,7 @@ class EnigmaTest < Minitest::Test
 
   def test_the_offset_is_array_with_6_elements
     offset_calculator = OffsetCalculator.new(key="1234567", date="060416")
-    assert_equal Array, offset_calculator.get_offset.class
+    assert_equal String, offset_calculator.get_offset.class
     assert_equal 6, offset_calculator.get_offset.count
   end
 
